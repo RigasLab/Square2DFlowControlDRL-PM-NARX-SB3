@@ -62,9 +62,9 @@ pip install gmsh=3.0.6 (Only needed if you want to generate new mesh files)
 
 ## How to run the code
 
-- **launch_parallel_training.py**: define training parameters (Algorithm, Neural Network, hyperparameters etc.)
+- **launch_parallel_training.py**: define RL parameters and launching training (Learning parameters, Neural Network configurations etc.)
 
-- **single_runner.py**: evaluate the latest saved policy.
+- **single_runner.py**: test a trained controller (the policy at any Checkpoint).
 
 ## Implementing on cluster as batch jobs 
 
@@ -83,8 +83,8 @@ To run the code on cluster:
 The main script for launching trainings as batch jobs is the **script_launch_parallel_cluster.sh** script. This script specifies the settings of the job (Time, Number of Procs etc.) and calls **launch_parallel_training.py**, which actually setup and run the training process.
 
 Make the job is sized correctly. For a mesh of around 10000 elements and a timestep of dt=0.004, these conservative guidelines are a good starting point:
-- wall_time = 30 minutes * #_episodes / #_parallel environments
-- n_cpus = #_parallel environments + 2
+- wall_time = 40 minutes * #_episodes / #_number of parallel environments
+- n_cpus = #_number of parallel environments + 2
 
 The job submission requires an environment variable **NUM_PORT** to be set prior to execution. This variable determines the number of parallel environments during training and can be modified in **script_launch_parallel_cluster.sh**.
 
@@ -94,12 +94,11 @@ The job submission requires an environment variable **NUM_PORT** to be set prior
 If you encounter problems, please:
 
 - look for help in the .md readme files of this repo
-- look for help on the github repo of the JFM paper used for serial training
 - if this is not enough to get your problem solved, feel free to open an issue and ask for help.
 
 
-## CFD simulation fenics, and user-defined user cases
+## Flow simulation
 
-The CFD simulation is implemented by FEniCS. Please refer to its official website https://fenicsproject.org/ for more details. 
-For more details about the CFD simulation and how to build your own user-defined cases, please consult the Readme of the JFM code, available at https://github.com/jerabaul29/Cylinder2DFlowControlDRL.
+The CFD in this code is implemented by FEniCS. Please refer to its official website https://fenicsproject.org/ for more details. 
+
 
