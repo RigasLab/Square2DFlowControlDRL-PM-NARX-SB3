@@ -1,7 +1,7 @@
 # Square2DFlowControlDRL-PM-NARX-SB3
 An open-source code release for the paper "Active Flow Control for Bluff Body Drag Reduction Using Reinforcement Learning with Partial Measurements". 
 
-Note: This README document is not the final version and will be updated soon.
+- Note: This README document is not the final version and will be updated soon.
 
 This repository contains code for reinforcement learning control aimed at reducing the drag due to vortex shedding in the wake of a 2D square body.
 
@@ -41,14 +41,16 @@ This code is developed for both running on the cluster (tested at Imperial Colle
 
 ## Package installation in Python
 
+Create a Python environment (in Conda) and activate it:
+
 ```
-- Create a Python environment (in Conda) and activate it:
-```
-conda create -n <ENV_NAME> -c conda-forge fenics (This will create an environment with a user-defined name "RLSB3" and install FEniCS with its dependencies.)
+conda create -n <ENV_NAME> -c conda-forge fenics (This will create an environment with a user-defined name and install FEniCS with its dependencies.)
 conda activate <ENV_NAME> 
 
 ```
-- Install other packages required (python 3.7+ and PyTorch >= 1.11 recommended)
+
+Install other packages required (python 3.7+ and PyTorch >= 1.11 recommended)
+
 ```
 pip3 install torch torchvision torchaudio (Check https://pytorch.org/get-started/locally/ if it doesn't work)
 pip install sb3-contrib (This will install stable-baselines3 as well automatically. Check https://sb3-contrib.readthedocs.io/en/master/guide/install.html for details.)
