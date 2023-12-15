@@ -1,8 +1,6 @@
 # Square2DFlowControlDRL-PM-NARX-SB3
 This repository contains the code corresponding to our manuscript "Active Flow Control for Bluff Body Drag Reduction Using Reinforcement Learning with Partial Measurements", preprint accessible at https://arxiv.org/abs/2307.12650.
 
-- Note: This README document is not the final version and will be updated soon.
-
 This code implements reinforcement learning control with a NARX-modelled controller with Soft Actor-Critic, to reduce the drag due to vortex shedding in the wake of a 2D square body.
 
 This code is a further development on the work published:
@@ -39,7 +37,7 @@ This code is developed for both running on the cluster (tested at Imperial Colle
 
 - The main reinforcement learning environment is in **Env2DCylinderModified.py**.
 - The reinforcement learning parameters are set in **launch_parallel_training.py**.
-- The simulation template to be set is in the **simulation_base** folder, **env.py**.
+- The simulation template to be set is in the **simulation_base/env.py**.
 - The simulation solver is in **flow_solver.py**.
 
 ## Package installation in Python
