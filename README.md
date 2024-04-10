@@ -1,11 +1,11 @@
 # Square2DFlowControlDRL-PM-NARX-SB3
-This repository contains the code corresponding to our manuscript "Active Flow Control for Bluff Body Drag Reduction Using Reinforcement Learning with Partial Measurements", preprint accessible at https://arxiv.org/abs/2307.12650.
+This repository contains the code corresponding to our JFM paper "Active Flow Control for Bluff Body Drag Reduction Using Reinforcement Learning with Partial Measurements", accessible at [here](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/active-flow-control-for-bluff-body-drag-reduction-using-reinforcement-learning-with-partial-measurements/F98233D07BAD238143B8C2544DE0BD03).
 
 This code implements reinforcement learning control with a NARX-modelled controller with Soft Actor-Critic, to reduce the drag due to vortex shedding in the wake of a 2D square body.
 
 This code is a further development on the work published:
  "Artificial Neural Networks trained through Deep Reinforcement Learning discover control strategies for active flow control", Rabault et. al., Journal of Fluid Mechanics (2019) (code at https://github.com/jerabaul29/Cylinder2DFlowControlDRL), 
-and in "Accelerating Deep Reinforcement Learning strategies of Flow Control through a multi-environment approach", Rabault and Kuhnle, Physics of Fluids (2019) (code at https://github.com/jerabaul29/Cylinder2DFlowControlDRLParallel). 
+and in "Accelerating Deep Reinforcement Learning Strategies of Flow Control through a multi-environment approach", Rabault and Kuhnle, Physics of Fluids (2019) (code at https://github.com/jerabaul29/Cylinder2DFlowControlDRLParallel). 
 
 The Reinforcement Learning framework used in this code is based on Stable Baseline3 https://github.com/DLR-RM/stable-baselines3 and Stable Baseline3 Contrib https://github.com/Stable-Baselines-Team/stable-baselines3-contrib
 
@@ -13,7 +13,7 @@ If you find this work useful and/or use it in your own research, please cite the
 
 ```
 Rabault, J., Kuhnle, A (2019).
-Accelerating Deep Reinforcement Leaning strategies of Flow Control through a
+Accelerating Deep Reinforcement Learning strategies of Flow Control through a
 multi-environment approach.
 Physics of Fluids.
 
