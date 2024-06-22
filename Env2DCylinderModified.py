@@ -33,7 +33,7 @@ import copy
 import subprocess
 import scipy.signal as sgn
 import io
-import pickle5 as pickle
+import pickle
 
 
 class RingBuffer():
