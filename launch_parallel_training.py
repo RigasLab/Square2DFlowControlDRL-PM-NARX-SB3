@@ -63,9 +63,9 @@ if __name__ == '__main__':
     env = SubprocVecEnv([resume_env(plot=False, dump_CL=False, dump_debug=10, n_env=i) for i in range(number_servers)], start_method='spawn')
     
     # Deactivate this if not use history observations
-    #env = VecFrameStack(env, n_stack=27)
+    env = VecFrameStack(env, n_stack=27)
     
-    #env = VecNormalize(env, gamma=0.99)
+    env = VecNormalize(env, gamma=0.99)
 
     # Replace 'TQC' by 'SAC' if want to use SAC
     model = TQC('MlpPolicy', env, policy_kwargs=policy_kwargs, tensorboard_log=savedir, device=device, **config)
